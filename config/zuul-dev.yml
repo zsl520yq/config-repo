@@ -12,7 +12,7 @@ eureka:
 
 zuul:
   retryable: true
-
+  sensitive-headers:
 #  routes:
 #    item-service: /item-service/**
 #    user-service: /user-service/**
@@ -31,7 +31,12 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 500
-            
+rabbitmq:
+    host: 192.168.94.132
+    port: 5672
+    username: admin
+    password: admin
+                
 management:
   endpoints:
     web:
